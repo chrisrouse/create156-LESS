@@ -1,0 +1,751 @@
+@import url('../standard/style.css');
+
+@import url('../standard/css/theme-responsive.css');
+/*
+Theme Name:     create156 LESS
+Theme URI:      https://github.com/eightbit/standard-child-themes/tree/master/Black-and-Blue
+Description:    Child theme for Standard 3
+Author:         Chris Rouse
+Author URI:     http://www.chrisrouse.us/
+Template:       standard
+Version:        2.0
+*/
+/* Import Standard Styles
+---------------------------------------------------------------------------------- */
+/* Uncomment the line below to enable child theme right-to-left language support. */
+/* @import url( '../standard/rtl.css' ); */
+/* Customizations
+---------------------------------------------------------------------------------- */
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\//\/\/\/\
+
+  1. General
+    - Variables
+    - Miscellaneous
+  2. Navigation
+  3. Header
+  4. Posts
+  5. Comments
+  6. Widgets
+  7. 404
+  8. Mixins
+*/
+/* ---------------------------------------------------------------------- 1. General */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: ;
+}
+hr.home {
+  margin: 0;
+  border-top: 5px solid #000000;
+  border-bottom: none;
+}
+.breadcrumb {
+  background: ;
+  background-image: ;
+  color: ;
+  border-radius: ;
+}
+.breadcrumb > li {
+  text-shadow: ;
+}
+.breadcrumb li > a {
+  color: ;
+  text-shadow: ;
+}
+.breadcrumb .divider,
+.breadcrumb > li > .divider {
+  color: ;
+}
+.thumbnail {
+  border: ;
+}
+#comments .comment-container .comment-entry .name {
+  color: ;
+}
+#comments .bypostauthor > .comment-container {
+  background: ;
+}
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:focus > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > li > a:focus > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:focus > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"],
+.dropdown-submenu:focus > a > [class*=" icon-"] {
+  background-image: none;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: none;
+  margin-right: 24px;
+}
+.centered-text {
+  text-align: center;
+}
+h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+.lead {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+#wrapper-design a {
+  color: #449bb5;
+}
+#wrapper-design .lead {
+  color: #043d5d;
+  font-weight: 300;
+}
+#wrapper-design h2 {
+  color: #043d5d;
+}
+#wrapper-design span.muted {
+  color: #449bb5;
+}
+#wrapper-design .span6.featurette {
+  padding-top: 50px;
+  overflow: hidden;
+}
+#wrapper-design .span6.featurette-image {
+  margin-top: 20px;
+}
+.btn-flat {
+  background: #449bb5;
+  background-image: none;
+  border-radius: 0;
+}
+#wrapper-design a.btn-flat {
+  color: white;
+  text-align: center;
+}
+hr.wrapper-design {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #449bb5;
+}
+#wrapper-showcase a {
+  color: #eb5055;
+}
+#wrapper-showcase h2 {
+  color: #043d5d;
+}
+#wrapper-showcase .lead {
+  color: #043d5d;
+}
+#wrapper-showcase span.muted {
+  color: #eb5055;
+}
+#wrapper-showcase .well {
+  background: none;
+  border: none;
+  padding: 5px;
+  box-shadow: none;
+}
+#wrapper-showcase .thumbnail {
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+}
+#wrapper-showcase .clients {
+  margin-bottom: 20px;
+}
+hr.wrapper-showcase {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #eb5055;
+}
+#wrapper-start a {
+  color: #68c39f;
+}
+#wrapper-start h2 {
+  color: ;
+}
+#wrapper-start span.muted {
+  color: #68c39f;
+}
+p.disclaimer {
+  font-size: 8px;
+}
+/*
+#wrapper-start .featurette-image.pull-left {
+  margin-right: 40px;
+}
+
+#wrapper-start .featurette-image.pull-right {
+  margin-left: 40px;
+}
+*/
+#wrapper-start .span8.featurette {
+  /*  padding-top: 50px; */
+  overflow: hidden;
+}
+#wrapper-start .span4.featurette-image {
+  margin-top: 50px;
+}
+hr.wrapper-start {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #68c39f;
+}
+/* Featurettes
+    ------------------------- */
+/*
+.featurette-divider {
+  margin: 80px 0; // Space out the Bootstrap <hr> more
+}
+
+.featurette {
+  padding-top: 50px; // Vertically center images part 1: add padding above and below text.
+  overflow: hidden; // Vertically center images part 2: clear their floats.
+}
+.featurette-image {
+  margin-top: 25px; // Vertically center images part 3: negative margin up the image the same amount of the padding to center it.
+  width: 400px;
+
+}
+*/
+/*// Thin out the marketing headings
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+*//* ---------------------------------------------------------------------- 2. Navigation */
+.navbar-inverse .navbar-inner {
+  background: none;
+  box-shadow: none;
+}
+/* Above Header
+---------------------------------------------- */
+#menu-above-header .navbar-inner,
+.navbar .fill {
+  background-color: none;
+  background-image: none;
+  filter: none;
+}
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .current-menu-item > a,
+.navbar .nav .current-menu-item > a:active {
+  background-color: ;
+  color: #449bb5;
+  box-shadow: none;
+}
+#menu-above-header.navbar .nav-menu > li > a:hover {
+  background-color: ;
+  color: #ffffff;
+  box-shadow: none;
+}
+#menu-above-header.navbar .nav > li > a {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin: 15px;
+}
+/* Below Header
+---------------------------------------------- */
+#menu-under-header .navbar-inner,
+.navbar .fill {
+  background-color: none;
+  background-image: none;
+  filter: none;
+}
+#menu-under-header.navbar .nav .active > a {
+  background-color: none;
+  color: #eb5055;
+  box-shadow: none;
+}
+#menu-under-header.navbar .nav-menu > li > a:hover {
+  background-color: ;
+  color: #000000;
+  box-shadow: none;
+}
+#menu-under-header.navbar .nav > li > a {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin: 15px;
+}
+/* Footer
+---------------------------------------------- */
+#footer,
+#footer #sub-floor {
+  background-color: #ffffff;
+}
+#footer #sub-floor .navbar .nav > li > a {
+  color: #449bb5;
+}
+#footer #sub-floor .navbar .nav > li > a:hover {
+  color: #043d5d;
+}
+#footer #sub-floor #credit {
+  color: #449bb5;
+}
+#footer #sub-floor #credit a {
+  color: #449bb5;
+}
+#footer #sub-floor #credit a:hover {
+  color: #043d5d;
+}
+/* Drop Down / Sub Menus
+---------------------------------------------- */
+.navbar .dropdown-menu {
+  background: ;
+}
+.navbar .dropdown-menu a {
+  color: ;
+}
+.navbar .dropdown-menu > li a:hover,
+.navbar .dropdown-menu > li.active a:hover {
+  background-color: ;
+  color: ;
+  box-shadow: ;
+}
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret,
+.navbar .dropdown-menu .caret {
+  border-top-color: ;
+  border-bottom-color: ;
+}
+.btn.btn-navbar {
+  background: ;
+  border-radius: ;
+  box-shadow: ;
+  border: ;
+  display: none;
+}
+.navbar .btn-navbar .icon-bar {
+  background-color: ;
+  box-shadow: ;
+}
+.btn.btn-navbar:hover {
+  background: ;
+  border-radius: ;
+  box-shadow: ;
+  border: ;
+}
+.navbar .btn-navbar:hover .icon-bar {
+  background-color: ;
+  box-shadow: ;
+}
+.navbar-inverse .nav-collapse .dropdown-menu a {
+  color: ;
+  font-weight: ;
+}
+.navbar-inverse .nav-collapse .dropdown-menu a:hover {
+  background: ;
+}
+/* ---------------------------------------------------------------------- 3. Header */
+#site-title a {
+  color: ;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+#site-title a:hover {
+  color: ;
+}
+#site-description {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: ;
+  font-size: 15px;
+  line-height: 30px;
+  background: ;
+}
+#hgroup {
+  padding: 0;
+}
+/* ---------------------------------------------------------------------- 4. Posts */
+.post-header {
+  border: none;
+}
+.post-meta {
+  border: none;
+}
+.post {
+  border: none;
+  border-radius: 0px;
+  background: none;
+  color: ;
+  box-shadow: none;
+  background-color: ;
+}
+/*
+
+.entry-title {
+    display: none;
+}
+
+
+.post .entry-content h1, .post .entry-content h2, .post .entry-content h3, .post .entry-content h4, .post .entry-content h5, .post .entry-content h6 {
+    line-height: 100%;
+}
+
+.post-header {
+    border: none;
+    display: none;
+}
+
+.post-meta {
+    border: none;
+}
+
+.post {
+        border: none;
+        border-radius: 0px;
+        background: none;
+        color: ;
+        box-shadow: none;
+        background-color: ;
+}
+
+.post-title,
+.post.format-link .post-title {
+    .links();
+}
+
+.post-title a, .post-title a:visited {
+    color: ;
+}
+
+.entry-title {
+    color: ;
+}
+
+
+// aside
+.format-aside .aside-date {
+    background: ;
+}
+
+
+// quote
+.format-quote .post-header {
+    background-color: ;
+    background-image: none;
+}
+
+// links
+.post.format-link .post-header {
+    background-color: ;
+}
+
+// status
+.post.format-status .post-header {
+    background-color: ;
+    background-image: none;
+    box-shadow: none;
+}
+
+
+.post .entry-content, .entry-content {
+    padding: 0px;
+}
+
+
+.links();
+*//* ---------------------------------------------------------------------- 5. Comments */
+#author-box,
+#comments,
+#pings,
+#no-comments,
+#respond {
+  background: ;
+  box-shadow: none;
+  border-radius: 0px;
+  border: none;
+  color: ;
+}
+#no-comments .title {
+  color: ;
+}
+#commentform label {
+  color: ;
+}
+/* ---------------------------------------------------------------------- 6. Widgets */
+.span4 .social-media-icons {
+  text-align: center;
+}
+.span4 .social-media-icons .image {
+  padding: 0px 5px 0px 5px;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .span4 .social-media-icons .image {
+    padding: 0px 5px 0px 5px;
+    width: 32px;
+    height: 100%;
+  }
+}
+/*
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius: 0px;
+}
+
+select {
+    width: 300px;
+}
+
+.tabbed-widget .tab-content {
+    border-radius: 0px;
+
+}
+
+.input-focus (135, 206, 235);
+
+#searchform #s::-webkit-input-placeholder {
+   color: @searchtextColor;
+}
+
+#searchform #s:-moz-placeholder {
+   color: @linkColor;
+}
+
+.widget ul li {
+    .links();
+}
+
+.widget {
+    color: @widgettextColor;
+}
+
+.widget h4.widget-title {
+    color: @color2;
+    border-bottom: 1px solid @color2;
+}
+
+.standard-ad-125x125 .thumbnails>li .thumbnail {
+    background: @color1;
+    border-color: @color1;
+}
+
+// activity tab
+.tabbed-widget .tab-content ul li a {
+    color: @linkColor;
+    font-weight: normal;
+}
+
+
+.tabbed-widget .nav-tabs>li.active>a {
+    border-color: @color1;
+    background: darken(@navbarBackground, 20%);
+    color: @white;
+}
+
+.tabbed-widget .nav-tabs>li>a {
+    border: 1px solid @color1;
+    background-color: @color1;
+    background-image: none;
+    color: @white;
+}
+
+.tabbed-widget .nav-tabs > li.active > a:hover{
+    color: @white;
+    background: darken(@navbarBackground, 20%);
+}
+
+.tabbed-widget .tab-content ul>li {
+    border-bottom: 1px solid @color1;
+}
+
+.tabbed-widget .tab-content {
+    background: @color3;
+    border: 1px solid @color1;
+}
+
+// tag cloud
+.tagcloud a {
+    color: @white;
+    background: @color1;
+    border-radius: 0;
+    margin: 3px 2px;
+}
+*//* ---------------------------------------------------------------------- 7. 404 */
+#nothing-found h1 {
+  color: #449bb5;
+}
+body.error404 {
+  color: #ffffff;
+}
+/* ---------------------------------------------------------------------- 8. Mixins */
+.links a {
+  color: #fffcf5;
+}
+.links a:hover {
+  color: #043d5d;
+}
+.gradient {
+  background-image: -moz-linear-gradient(top, #060606 0%, #252a30 50%);
+  background-image: -ms-linear-gradient(top, #060606 0%, #252a30 50%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#060606 0%), to(#252a30 50%));
+  background-image: -webkit-linear-gradient(top, #060606 0%, #252a30 50%);
+  background-image: -o-linear-gradient(top, #060606 0%, #252a30 50%);
+  background-image: linear-gradient(top, #060606 0%, #252a30 50%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@gradientStart', endColorstr='#@gradientStop', GradientType=0);
+}
+.effect6 {
+  -webkit-box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.3);
+}
+/* Media Queries
+---------------------------------------------------------------------------------- */
+/* Smartphones */
+@media (max-width: 480px) {
+  .navbar .nav,
+  .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+  }
+  .navbar-inner {
+    text-align: center;
+  }
+  .menu-header-container {
+    width: 100%;
+  }
+  #social-networking {
+    float: none;
+    margin-right: 0px;
+  }
+  #logo {
+    float: none;
+    text-align: center;
+  }
+}
+/* Tablet & Mobile */
+@media (max-width: 979px) {
+  .navbar .nav,
+  .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+  }
+  .navbar-inner {
+    text-align: center;
+  }
+  .menu-header-container {
+    width: 100%;
+  }
+  #social-networking {
+    float: none;
+    margin-right: 0px;
+  }
+  #logo {
+    float: none;
+    text-align: center;
+  }
+}
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+  .navbar .nav,
+  .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+  }
+  .navbar-inner {
+    text-align: center;
+  }
+  .menu-header-container {
+    width: 100%;
+  }
+  #social-networking {
+    float: none;
+    margin-right: 0px;
+  }
+  #logo {
+    float: none;
+    text-align: center;
+  }
+  .featurette-heading {
+    font-size: 20px;
+  }
+  .featurette .lead {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .featurette p.disclaimer {
+    font-size: 9px;
+  }
+}
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar .nav,
+  .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+  }
+  .navbar-inner {
+    text-align: center;
+  }
+  .menu-header-container {
+    width: 100%;
+  }
+  #social-networking {
+    float: none;
+    margin-right: 0px;
+  }
+  #logo {
+    float: none;
+    text-align: center;
+  }
+}
+/* Desktop */
+@media (min-width: 980px) {
+  .navbar .nav,
+  .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+  }
+  .navbar-inner {
+    text-align: center;
+  }
+  .menu-header-container {
+    width: 100%;
+  }
+  #social-networking {
+    float: none;
+    margin-right: 0px;
+  }
+  #logo {
+    float: none;
+    text-align: center;
+  }
+}
