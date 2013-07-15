@@ -142,7 +142,7 @@ hr.wrapper-design {
   border: 1px solid #449bb5;
 }
 #wrapper-showcase a {
-  color: #eb5055;
+  color: #68c39f;
 }
 #wrapper-showcase h2 {
   color: #043d5d;
@@ -151,7 +151,7 @@ hr.wrapper-design {
   color: #043d5d;
 }
 #wrapper-showcase span.muted {
-  color: #eb5055;
+  color: #68c39f;
 }
 #wrapper-showcase .well {
   background: none;
@@ -172,16 +172,16 @@ hr.wrapper-showcase {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #eb5055;
+  border: 1px solid #68c39f;
 }
 #wrapper-start a {
-  color: #68c39f;
+  color: #eb5055;
 }
 #wrapper-start h2 {
-  color: ;
+  color: #043d5d;
 }
 #wrapper-start span.muted {
-  color: #68c39f;
+  color: #eb5055;
 }
 p.disclaimer {
   font-size: 8px;
@@ -201,39 +201,16 @@ p.disclaimer {
 }
 #wrapper-start .span4.featurette-image {
   margin-top: 50px;
+  text-align: center;
 }
 hr.wrapper-start {
   width: 50%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #68c39f;
+  border: 1px solid #eb5055;
 }
-/* Featurettes
-    ------------------------- */
-/*
-.featurette-divider {
-  margin: 80px 0; // Space out the Bootstrap <hr> more
-}
-
-.featurette {
-  padding-top: 50px; // Vertically center images part 1: add padding above and below text.
-  overflow: hidden; // Vertically center images part 2: clear their floats.
-}
-.featurette-image {
-  margin-top: 25px; // Vertically center images part 3: negative margin up the image the same amount of the padding to center it.
-  width: 400px;
-
-}
-*/
-/*// Thin out the marketing headings
-.featurette-heading {
-  font-size: 50px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-*/.pricing-table .plan {
+.pricing-table .plan {
   border-radius: 5px;
   text-align: center;
   background-color: #f3f3f3;
@@ -351,16 +328,15 @@ hr.wrapper-start {
 }
 /* ---------------------------------------------------------------------- 2. Navigation */
 .navbar-inverse .navbar-inner {
-  background: none;
-  box-shadow: none;
+  background: ;
+  box-shadow: ;
 }
-/* Above Header
----------------------------------------------- */
 #menu-above-header .navbar-inner,
 .navbar .fill {
-  background-color: none;
-  background-image: none;
-  filter: none;
+  background-color: ;
+  background-image: ;
+  filter: ;
+  height: 80px;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover,
@@ -371,8 +347,9 @@ hr.wrapper-start {
   box-shadow: none;
 }
 #menu-above-header.navbar .nav-menu > li > a:hover {
-  background-color: ;
-  color: #ffffff;
+  background-color: none;
+  background: none;
+  color: ;
   box-shadow: none;
 }
 #menu-above-header.navbar .nav > li > a {
@@ -380,100 +357,132 @@ hr.wrapper-start {
   font-size: 18px;
   letter-spacing: 1.5px;
   margin: 15px;
+  font-family: 'Roboto Slab', serif;
 }
-/* Below Header
----------------------------------------------- */
+/*
+// HEADER MENU (LOWER)
+
+// Navbar background
 #menu-under-header .navbar-inner,
 .navbar .fill {
-  background-color: none;
-  background-image: none;
-  filter: none;
+	background-color: none;
+	background-image: none;
+    filter: none;
 }
+
+// Active and Hover menu settings
 #menu-under-header.navbar .nav .active > a {
-  background-color: none;
-  color: #eb5055;
-  box-shadow: none;
+    background-color: none;
+    color: @color3;
+    box-shadow: none;
 }
+
+// Hover effect
 #menu-under-header.navbar .nav-menu > li > a:hover {
-  background-color: ;
-  color: #000000;
-  box-shadow: none;
+    background-color: ;
+    color: @black;
+    box-shadow: none;
 }
+
+// Text
 #menu-under-header.navbar .nav > li > a {
-  font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  margin: 15px;
+    font-weight: 300;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	margin: 15px;
 }
-/* Footer
----------------------------------------------- */
+
+// FOOTER MENU
+
+// Navbar background
+
 #footer,
 #footer #sub-floor {
-  background-color: #ffffff;
+	background-color: @white;
 }
+
+// Links
 #footer #sub-floor .navbar .nav > li > a {
-  color: #449bb5;
+	color: @color1;
 }
+
 #footer #sub-floor .navbar .nav > li > a:hover {
-  color: #043d5d;
+	color: @color2;
 }
+
+// Credit
 #footer #sub-floor #credit {
-  color: #449bb5;
+	color: @color1;
 }
+
 #footer #sub-floor #credit a {
-  color: #449bb5;
+	color: @color1;
 }
+
 #footer #sub-floor #credit a:hover {
-  color: #043d5d;
+	color: @color2;
 }
-/* Drop Down / Sub Menus
----------------------------------------------- */
+
+
+// DROPDOWNS
+
 .navbar .dropdown-menu {
-  background: ;
+	background: ;
 }
+
 .navbar .dropdown-menu a {
-  color: ;
+	color: ;
 }
+
 .navbar .dropdown-menu > li a:hover,
 .navbar .dropdown-menu > li.active a:hover {
-  background-color: ;
-  color: ;
-  box-shadow: ;
+    background-color: ;
+    color: ;
+    box-shadow: ;
 }
+
 .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret,
 .navbar .dropdown-menu .caret {
-  border-top-color: ;
-  border-bottom-color: ;
+border-top-color:  ;
+border-bottom-color:  ;
 }
+
+// Hamburger
 .btn.btn-navbar {
-  background: ;
-  border-radius: ;
-  box-shadow: ;
-  border: ;
-  display: none;
+    background: ;
+    border-radius: ;
+    box-shadow: ;
+    border: ;
+    display: none;
 }
+
 .navbar .btn-navbar .icon-bar {
-  background-color: ;
-  box-shadow: ;
-}
+    background-color: ;
+    box-shadow: ;
+    }
+
 .btn.btn-navbar:hover {
-  background: ;
-  border-radius: ;
-  box-shadow: ;
-  border: ;
+    background: ;
+    border-radius: ;
+    box-shadow: ;
+    border: ;
 }
+
 .navbar .btn-navbar:hover .icon-bar {
-  background-color: ;
-  box-shadow: ;
+    background-color: ;
+    box-shadow: ;
 }
+
+// Hamburger menu
 .navbar-inverse .nav-collapse .dropdown-menu a {
-  color: ;
-  font-weight: ;
+    color: ;
+    font-weight: ;
 }
+
 .navbar-inverse .nav-collapse .dropdown-menu a:hover {
-  background: ;
+    background: ;
 }
-/* ---------------------------------------------------------------------- 3. Header */
+*//* ---------------------------------------------------------------------- 3. Header */
 #site-title a {
   color: ;
   font-size: 30px;
@@ -515,6 +524,9 @@ hr.wrapper-start {
   -webkit-box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.3);
+}
+.home .row-fluid.social-media-icons {
+  margin-top: -50px;
 }
 /*
 
@@ -760,6 +772,11 @@ body.error404 {
     float: none;
     text-align: center;
   }
+  .post .thumbnail img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+  }
 }
 /* Tablet & Mobile */
 @media (max-width: 979px) {
@@ -784,6 +801,18 @@ body.error404 {
   #logo {
     float: none;
     text-align: center;
+  }
+  .nav-collapse,
+  .nav-collapse.collapse {
+    overflow: visible;
+  }
+  .navbar .btn-navbar {
+    display: none;
+  }
+  .navbar ul.nav-menu {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 /* Mobile to Tablet */
@@ -819,6 +848,9 @@ body.error404 {
   }
   .featurette p.disclaimer {
     font-size: 9px;
+  }
+  .post .thumbnail img {
+    margin-bottom: 10px;
   }
 }
 /* Landscape Tablets */
